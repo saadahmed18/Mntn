@@ -182,9 +182,12 @@ article a {
   margin-top: 20px;
   color: var(--jasmine);
 }
-.articles-variable .container {
+.the-equipment .container {
   flex-direction: row-reverse;
 }
-.articles-variable article h2::before {
+.the-equipment h2::before {
   content: "02";
+}
+.the-map article h2::before {
+  content: "03";
 }
