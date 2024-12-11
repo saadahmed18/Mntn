@@ -161,7 +161,16 @@ span::before {
   color: var(--white);
 }
 article h2 {
+  position: relative;
   margin: 20px 0;
+}
+article h2::before {
+  content: "01";
+  position: absolute;
+  top: -80px;
+  left: -40px;
+  font-size: 100px;
+  color: rgb(255 255 255 / 0.4);
 }
 article p {
   line-height: 1.5;
@@ -172,4 +181,10 @@ article a {
   gap: 10px;
   margin-top: 20px;
   color: var(--jasmine);
+}
+.articles-variable .container {
+  flex-direction: row-reverse;
+}
+.articles-variable article h2::before {
+  content: "02";
 }
