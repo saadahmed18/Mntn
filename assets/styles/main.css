@@ -46,19 +46,17 @@ header {
   position: fixed;
   width: 100%;
   z-index: 5;
-  background-color: brown;
 }
 header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-header .logo a,
-nav ul li a {
+header .logo a {
   color: var(--white);
 }
 @media (max-width: 991px) {
-  nav label {
+  nav label img {
     cursor: pointer;
   }
   nav {
@@ -73,12 +71,15 @@ nav ul li a {
     top: 30px;
     right: 0;
     width: 200px;
-    background-color: black;
+    background-color: var(--white);
   }
   nav ul li a {
     display: block;
     padding: 15px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.199);
+    color: var(--black);
+  }
+  nav ul li:not(:last-child) {
+    border-bottom: 1px solid rgb(0 0 0 / 0.1);
   }
 }
 @media (min-width: 992px) {
@@ -91,5 +92,48 @@ nav ul li a {
   }
   nav ul li a {
     padding: 0 20px;
+    color: var(--white);
   }
+}
+.hero {
+  background-image: url(../images/hero.webp);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 100vh;
+}
+.hero .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.hero .title span {
+  display: block;
+  position: relative;
+  padding-left: 50px;
+  letter-spacing: 3px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--jasmine);
+}
+.hero .title span::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 0;
+  width: 40px;
+  height: 1px;
+  background-color: var(--jasmine);
+}
+.hero .title h1 {
+  font-size: 42px;
+  line-height: 1.5;
+  color: var(--white);
+}
+.hero .title a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  color: var(--white);
 }
